@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+    private GameManager gameManager;
     //private Animator playerAnimator;
 
     [SerializeField] private float speed = 5.0f;
@@ -23,7 +24,18 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        playerRb.AddForce(Vector3.right * speed * horizontalInput); 
+        playerRb.AddForce(Vector3.right * speed * horizontalInput);
+
+        DestroyPlayerOutOfBound();
+    }
+
+    private void DestroyPlayerOutOfBound()
+    {
+        if (gameObject.transform.position.y < -3.5f)
+        {
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
     }
 
 

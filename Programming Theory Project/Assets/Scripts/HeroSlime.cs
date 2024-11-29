@@ -22,4 +22,6 @@ public class HeroSlime : PlayerController
             Destroy(other.gameObject);
         }
     }
+
+    
 }
