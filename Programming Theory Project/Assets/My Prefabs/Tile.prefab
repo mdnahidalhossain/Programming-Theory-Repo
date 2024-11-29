@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1678411066103414511}
   - component: {fileID: 8253115969656950206}
   - component: {fileID: 2108998400910665054}
+  - component: {fileID: -8343079680895327150}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
@@ -119,3 +120,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileSpeed: 5
+--- !u!114 &-8343079680895327150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829299438183830625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a5133c13c882f4ba7d005037788e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

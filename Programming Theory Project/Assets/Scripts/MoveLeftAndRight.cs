@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLeftAndRight : SlideLeft
 {
     private float posX = 12.5f;
-    private float speed = 5.0f;
+    //private float speed = 20.0f;
     private float direction = 1.0f;
     //private float posX2 = -12.5f;
 
@@ -18,12 +18,12 @@ public class MoveLeftAndRight : SlideLeft
     // Update is called once per frame
     void Update()
     {
-        MoveLeft();
+        MoveTile();
     }
 
-    public override void MoveLeft()
+    public override void MoveTile()
     {
-        transform.Translate(Vector3.right * speed * direction * Time.deltaTime);
+        transform.Translate(Vector3.right * tileSpeed * direction * Time.deltaTime);
 
         // Reverse direction if the tile reaches the bounds
         if (transform.position.x > posX)

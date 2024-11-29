@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SlideLeft : MonoBehaviour
 {
-    [SerializeField] private float tileSpeed = 7.0f;
+    [SerializeField] protected float tileSpeed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,10 +16,10 @@ public class SlideLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveLeft();
+        MoveTile();
     }
 
-    public virtual void MoveLeft()
+    public virtual void MoveTile()
     {
         transform.Translate(Vector3.left * tileSpeed * Time.deltaTime);
     }

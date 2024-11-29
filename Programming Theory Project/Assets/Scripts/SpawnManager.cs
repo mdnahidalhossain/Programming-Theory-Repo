@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject spawnObject;
     private float timeDelay = 1.0f;
-    private float spawnTime = 2.0f;
+    private float spawnTime = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,4 +31,5 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(spawnObject, tileSpawnPos, spawnObject.transform.rotation);
     }
+
 }
