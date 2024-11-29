@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private bool isGameOver = false;
 
-
+    private float xBound = 22.0f;
+    private float yBound = 3.5f;
 
     // Update is called once per frame
     private void Start()
@@ -36,14 +37,14 @@ public class GameManager : MonoBehaviour
 
     private void DestroyPlayerOutOfBound()
     {
-        if (player.gameObject.transform.position.y < -3.5f)
+        if (player.gameObject.transform.position.y < -yBound)
         {
             isGameOver = true;
             Destroy(player.gameObject);
             GameOver();
         }
 
-        else if (player.gameObject.transform.position.x < -22.0f)
+        else if (player.gameObject.transform.position.x < -xBound)
         {
             isGameOver = true;
             Destroy(player.gameObject);
