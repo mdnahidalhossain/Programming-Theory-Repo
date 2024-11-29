@@ -12,7 +12,6 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //spawnObject = GetComponent<GameObject>();
 
         InvokeRepeating("SpawnPosition", timeDelay, spawnTime);
     }
@@ -20,7 +19,6 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //SpawnPosition();
     }
 
     public void SpawnPosition()
