@@ -5,9 +5,8 @@ using UnityEngine;
 public class MoveLeftAndRight : SlideLeft
 {
     private float posX = 12.5f;
-    //private float speed = 20.0f;
     private float direction = 1.0f;
-    //private float posX2 = -12.5f;
+
 
     // Start is called before the first frame update
     void Start()

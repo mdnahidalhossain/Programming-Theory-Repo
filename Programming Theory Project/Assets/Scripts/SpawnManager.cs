@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject spawnObject;
+
     private float timeDelay = 1.0f;
     private float spawnTime = 3.0f;
 

@@ -6,6 +6,7 @@ public class HeroSlime : PlayerController
 {
     private Transform movingTile;
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Tile"))
@@ -22,4 +23,5 @@ public class HeroSlime : PlayerController
             Destroy(other.gameObject);
         }
     }
+    
 }
