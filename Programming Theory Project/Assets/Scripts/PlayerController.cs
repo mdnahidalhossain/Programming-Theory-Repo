@@ -5,19 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    private Animator playerAnimator;
+    //private Animator playerAnimator;
 
-    public float speed = 5.0f;
-    public float jumpForce = 3.0f;
+    [SerializeField] private float speed = 5.0f;
+    //[SerializeField] private float jumpForce = 3.0f;
 
-    [SerializeField] private bool isOnGround = true; 
+    [SerializeField] protected bool isOnGround = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
-        playerAnimator = GetComponent<Animator>();
+        //playerAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,18 +27,14 @@ public class PlayerController : MonoBehaviour
 
         playerRb.AddForce(Vector3.right * speed * horizontalInput);
 
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
-        {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;
-            playerAnimator.SetTrigger("Jump");
+        //if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        //{
+        //    playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        //    isOnGround = false;
+        //    playerAnimator.SetTrigger("Jump");
 
-        }
+        //}
 
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        isOnGround = true;
+        
     }
 }

@@ -15,6 +15,11 @@ public class SlideLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveLeft();
+    }
+
+    public virtual void MoveLeft()
+    {
         transform.Translate(Vector3.left * tileSpeed * Time.deltaTime);
     }
 }

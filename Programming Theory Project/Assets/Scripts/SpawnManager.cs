@@ -5,14 +5,15 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject spawnObject;
-    Vector3 tileSpawnPos = new Vector3(12.22f, 0.2895631f, 0);
+    private float timeDelay = 1.0f;
+    private float spawnTime = 2.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         //spawnObject = GetComponent<GameObject>();
 
-        InvokeRepeating("SpawnPosition", 1.0f, 2.0f);
+        InvokeRepeating("SpawnPosition", timeDelay, spawnTime);
     }
 
     // Update is called once per frame
@@ -23,6 +24,11 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnPosition()
     {
+        float posX = 22.0f;
+        float posY = Random.Range(12.0f, 4.0f);
+        float posZ = -0.79f;
+        Vector3 tileSpawnPos = new Vector3(posX, posY, posZ);
+
         Instantiate(spawnObject, tileSpawnPos, spawnObject.transform.rotation);
     }
 }
