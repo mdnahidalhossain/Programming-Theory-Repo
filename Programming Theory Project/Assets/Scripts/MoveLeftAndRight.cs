@@ -7,13 +7,6 @@ public class MoveLeftAndRight : SlideLeft
     private float posX = 12.5f;
     private float direction = 1.0f;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

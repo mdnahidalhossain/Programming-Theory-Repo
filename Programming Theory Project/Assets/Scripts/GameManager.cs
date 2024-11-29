@@ -10,13 +10,9 @@ public class GameManager : MonoBehaviour
 {
     private HeroSlime player;
     [SerializeField] private GameObject gameOverPanel;
-
-    //[SerializeField] private Text gameOverText;
-    //[SerializeField] private Button restartButton;
-
     [SerializeField] private bool isGameOver = false;
 
-    // Start is called before the first frame update
+
 
     // Update is called once per frame
     private void Start()
